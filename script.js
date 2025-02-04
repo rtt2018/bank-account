@@ -6,6 +6,7 @@ const Transaction = {
       return { id: crypto.randomUUID(), type, amount };
     } else {
       console.log("Одна з необхідних змінних не визначена!");
+      return;
     }
   },
 };
