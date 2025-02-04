@@ -4,7 +4,6 @@ const Transaction = {
   create(amount, type) {
     if (type && amount) {
       return { id: crypto.randomUUID(), type, amount };
-      return;
     } else {
       console.log("Одна з необхідних змінних не визначена!");
     }
