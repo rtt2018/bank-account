@@ -2,11 +2,11 @@ const Transaction = {
   DEPOSIT: "deposit",
   WITHDRAW: "withdraw",
   create(amount, type) {
-    if (!((type ?? false) && (amount ?? false))) {
-      console.log("Одна з необхідних змінних не визначена!");
+    if (type && amount) {
+      return { id: crypto.randomUUID(), type, amount };
       return;
     } else {
-      return { id: crypto.randomUUID(), type, amount };
+      console.log("Одна з необхідних змінних не визначена!");
     }
   },
 };
